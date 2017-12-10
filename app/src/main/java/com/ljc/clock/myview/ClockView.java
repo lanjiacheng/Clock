@@ -37,9 +37,10 @@ public class ClockView extends FrameLayout {
         view_minute = (ImageView)findViewById(R.id.view_minute);
         view_hour = (ImageView)findViewById(R.id.view_hour);
         mActivity = new MainActivity();
+        start();
     }
     /*
-    开始方法
+    开始旋转方法，启动一个子线程，来获取系统时间并更新指针UI
      */
     public void start(){
         if(isStop){
@@ -73,7 +74,7 @@ public class ClockView extends FrameLayout {
         }
     }
     /*
-    停止方法
+    停止旋转方法，调用此方法，即使子线程还在运行，但是并不会执行更新Ui的代码
      */
     public void stop(){
         if(!isStop){

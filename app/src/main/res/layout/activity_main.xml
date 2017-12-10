@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.ljc.clock.MainActivity"
-    android:background="#bdbdbe">
-    <com.ljc.clock.myview.ClockView
-        android:id="@+id/clock_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    android:orientation="vertical"
+    android:background="@drawable/bg_main">
+    <include layout="@layout/top_bar"/>
+    <include layout="@layout/clockview"/>
 </LinearLayout>
