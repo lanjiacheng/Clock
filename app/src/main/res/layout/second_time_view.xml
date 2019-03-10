@@ -7,65 +7,75 @@
         android:layout_height="0dp"
         android:layout_weight="6"
         android:layout_width="match_parent"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="30dp"
         android:layout_gravity="top|center_horizontal">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="30dp"
             android:src="@drawable/second_clock"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginRight="110dp"
             android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:background="@drawable/num_bg">
             <ImageView
+                android:id="@+id/img_minute_1"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:layout_margin="0.1dp"
                 android:src="@drawable/num_0"/>
             <ImageView
+                android:id="@+id/img_minute_2"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:layout_margin="0.1dp"
                 android:src="@drawable/num_0"/>
             <ImageView
+                android:id="@+id/img_split_1"
                 android:layout_width="0dp"
                 android:layout_weight="0.5"
                 android:layout_height="match_parent"
                 android:src="@drawable/num_split"/>
             <ImageView
+                android:id="@+id/img_second_1"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:layout_margin="0.1dp"
                 android:src="@drawable/num_0"/>
             <ImageView
+                android:id="@+id/img_second_2"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:layout_margin="0.1dp"
                 android:src="@drawable/num_0"/>
             <ImageView
+                android:id="@+id/img_split_2"
                 android:layout_width="0dp"
                 android:layout_weight="0.5"
                 android:layout_height="match_parent"
                 android:src="@drawable/num_split"/>
             <ImageView
+                android:id="@+id/img_millisecond_1"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:layout_margin="0.1dp"
                 android:src="@drawable/num_0"/>
             <ImageView
+                android:id="@+id/img_millisecond_2"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
@@ -75,24 +85,25 @@
     </FrameLayout>
     <LinearLayout
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="3"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_gravity="bottom|center_horizontal"
         >
         <TextView
+            android:id="@+id/text_msg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:text="准备计时"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
             android:layout_marginBottom="15dp"
             android:background="#000000"/>
         <LinearLayout
@@ -107,13 +118,24 @@
                 android:gravity="left"
                 android:layout_width="0dp"
                 android:orientation="vertical"
-                android:layout_marginLeft="50dp">
-                <Button
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/start"/>
+                android:layout_marginLeft="80dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/img_second_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/start"/>
+                    <Button
+                        android:id="@+id/button_second_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00000000"/>
+                </FrameLayout>
                 <TextView
+                    android:id="@+id/text_second_left"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -127,12 +149,21 @@
                 android:layout_gravity="right"
                 android:layout_width="0dp"
                 android:orientation="vertical"
-                android:layout_marginRight="50dp">
-                <Button
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/reset"/>
+                android:layout_marginRight="80dp">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/reset"/>
+                    <Button
+                        android:id="@+id/button_second_reset"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00000000"/>
+                </FrameLayout>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

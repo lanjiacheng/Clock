@@ -8,32 +8,17 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="top|center_horizontal"
-        android:layout_marginBottom="30dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="50dp"
         android:layout_weight="6">
-
-        <ImageView
-            android:id="@+id/view_bigwheel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/bigwheel" />
-
-        <ImageView
-            android:id="@+id/view_littlewheel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/littlewheel" />
+        <com.ljc.clock.myview.WheelView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_weight="4"
+        android:layout_weight="3"
         android:orientation="vertical">
 
         <TextView
@@ -43,14 +28,14 @@
             android:gravity="center_horizontal"
             android:textColor="#000000"
             android:text="转动齿轮设置时间"
-            android:textSize="20sp"/>
+            android:textSize="15sp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginBottom="15dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
             android:layout_marginTop="20dp"
             android:background="#000000" />
 
@@ -64,18 +49,28 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="80dp"
                 android:layout_weight="1"
                 android:gravity="left"
                 android:orientation="vertical">
 
-                <Button
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/start" />
-
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/img_count_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/start"/>
+                    <Button
+                        android:id="@+id/button_count_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00000000"/>
+                </FrameLayout>
                 <TextView
+                    android:id="@+id/text_count_left"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -88,16 +83,24 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="right"
-                android:layout_marginRight="50dp"
+                android:layout_marginRight="80dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <Button
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/reset" />
-
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/reset"/>
+                    <Button
+                        android:id="@+id/button_count_reset"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00000000"/>
+                </FrameLayout>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">#95adb1</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">#95adb1</item>
     </style>
     <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
 
